@@ -1,54 +1,63 @@
+// EVEN OR ODD
+console.log("TASK 1 – EVEN OR ODD");
+function checkEvenOdd(number){
+    if(number % 2 == 0){
+        return "Even Number";
+    }
+    else{
+        return "Odd Number";
+    }
+}
+console.log(checkEvenOdd(10));
 
-// Even numbers
-console.log("Even Numbers");
-const arr=[1,2,3,4,5,6,7,8,9]
-let myarr=[]
-let i=0;
+// TASK 2 – LARGEST OF TWO NUMBERS
+console.log("TASK 2 – LARGEST OF TWO NUMBERS");
+function findLargest(a, b){
+    if(a > b){
+        return a;
+    }
+    else{
+        return b;
+    }
+}
+console.log(findLargest(25,40));
 
-    for(let a = 0; a < arr.length; a++){
-       
-console.log(arr[a]);
-if(arr[a]%2==0){
-myarr[i]=arr[a]
-i++
+// TASK 3 – VOTING ELIGIBILITY
+console.log("TASK 3 – VOTING ELIGIBILITY");
+
+function checkVote(age){
+    if(age >= 18){
+        return "Eligible to Vote";
+    }
+    else{
+        return "Not Eligible to Vote";
+    }
+}
+console.log(checkVote(20));
+
+// TASK 4 – SUM OF ARRAY
+console.log("TASK 4 – SUM OF ARRAY");
+function getTotal(numbers){
+    let total = 0;
+    for(let i = 0; i < numbers.length; i++){
+        total = total + numbers[i];
+    }
+    return total;
 }
 
+let numbers = [10, 20, 30, 40, 50];
+console.log(getTotal(numbers));
+
+// TASK 5 – COUNT EVEN NUMBERS
+console.log("TASK 5 – COUNT EVEN NUMBERS");
+function countEven(number){
+    let count = 0;
+    for(let i = 0; i < number.length; i++){
+        if(number[i] % 2 == 0){
+            count++;
+        }
+    }
+    return count;
 }
-console.log(myarr);
-
-// Fibonacci
-console.log("Fibonacci Series");
-let numbers = [];
-let firstValue = 0;
-let secondValue = 1;
-let position = 0;
-let limit = 10;
-
-for(let count = 0; count < limit; count++){
-    numbers[position] = firstValue;
-    position++;
-
-    let nextValue = firstValue + secondValue;
-    firstValue = secondValue;
-    secondValue = nextValue;
-
-}
-
-console.log(numbers);
-
-// Factorial
-console.log("Factorial Series");
-let resultArray = [];
-let total = 1;
-let index = 0;
-let number = 5;
-
-for(let value = 1; value <= number; value++){
-
-    total = total * value;
-    resultArray[index] = total;
-    index++;
-
-}
-
-console.log(resultArray);
+let number = [10, 15, 20, 25, 30, 35, 40];
+console.log(countEven(numbers));
